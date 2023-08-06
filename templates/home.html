@@ -1,0 +1,271 @@
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>Disease Predictor</title>
+
+    <style>
+      /* Three columns side by side */
+.column1 {
+  float: left;
+  width: 20%;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  padding-left: 20px;
+  padding-top: 20px;
+
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column1 {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+      section.pricing {
+        background: #007bff;
+        background: linear-gradient(to right, #0062e6, #33aeff);
+      }
+
+      .pricing .card {
+        border: none;
+        border-radius: 1rem;
+        transition: all 0.2s;
+        box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+      }
+
+      .pricing hr {
+        margin: 1.5rem 0;
+      }
+
+      .pricing .card-title {
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+        letter-spacing: 0.1rem;
+        font-weight: bold;
+      }
+
+      .pricing .card-price {
+        font-size: 3rem;
+        margin: 0;
+      }
+
+      .pricing .card-price .period {
+        font-size: 0.8rem;
+      }
+
+      .pricing ul li {
+        margin-bottom: 1rem;
+      }
+
+      .pricing .text-muted {
+        opacity: 0.7;
+      }
+
+      .pricing .btn {
+        font-size: 80%;
+        border-radius: 5rem;
+        letter-spacing: 0.1rem;
+        font-weight: bold;
+        padding: 1rem;
+        opacity: 0.7;
+        transition: all 0.2s;
+      }
+
+      /* Hover Effects on Card */
+
+      @media (min-width: 992px) {
+        .pricing .card:hover {
+          margin-top: -0.25rem;
+          margin-bottom: 0.25rem;
+          box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+        }
+        .pricing .card:hover .btn {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="{% url 'home' %}">Disease Predictor</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link mr-3 " href="{% url 'heart' %}"
+            >Heart Disease Prediction
+          </a>
+          <a class="nav-item nav-link mr-3" href="{% url 'diabetes' %}"
+            >Diabetes Disease Prediction
+          </a>
+          
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+      <h1 class="display-5"></h1>
+      <p class="lead ">
+        <h5>
+        Paramhansa Ramkrishna Maunibaba Shikshan Santha's </h5>
+         <h2>ANURADHA ENGINEERING COLLEGE CHIKHLI</h2><h6>Permanently Affiliated to Sant Gadge Baba Amravati University   DTE Code-1119   </h6>
+        we have developed a web app for heart disease prediction, diabetes prediction  prediciton using Machine Learning based on the Kaggle Datasets.
+      </p>
+      <p>
+   
+      </p>
+      
+    </div>
+
+    <section class="pricing py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Free Tier -->
+          <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">
+                  HEART DISEASE PREDICTION
+                </h5>
+
+                <hr />
+                <p class="">
+                  Heart disease is one of the biggest cause for morbidity and
+                  mortality among the population of the world. Prediction of
+                  cardiovascular disease is regarded as one of the most
+                  important subject in the section of clinical data analysis.
+                  The amount of data in the healthcare industry is huge. Data
+                  mining turns the large collection of raw healthcare data into
+                  information that can help to make informed decision and
+                  prediction.
+                </p>
+                <a
+                  href="{% url 'heart' %}"
+                  class="btn btn-block btn-danger text-uppercase"
+                  >KNOW HEART STATUS</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Plus Tier -->
+          <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">
+                  DIABETES PREDICTION
+                </h5>
+
+                <hr />
+                <p class="">
+                  Diabetes is considered as one of the deadliest and chronic
+                  diseases which causes an increase in blood sugar. Many
+                  complications occur if diabetes remains untreated and
+                  unidentified. The tedious identifying process results in
+                  visiting of a patient to a diagnostic center and consulting
+                  doctor. But the rise in machine learning approaches solves
+                  this critical problem.
+                </p>
+                <a
+                  href="{% url 'diabetes' %}"
+                  class="btn btn-block btn-dark text-uppercase"
+                  >KNOW DIABETES STATUS</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Pro Tier -->
+          
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+       
+
+ 
+        
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
